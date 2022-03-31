@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /* background-color: #4CB71A; */
+    border: 5px solid #DFDFDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box > .icofont-verification-check{
+    position: absolute;
+    font-size: 30px;
+    color: #555555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.box > p{
+    color: #555555;
+    font-size: 20px;
+    font-weight: 700;
+}
+.box2, .box4, .box6{
+    height: 4px;
+    width: 120px;
+    background-color: #DFDFDF;
+    margin: 0 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.box2::before, .box4::before, .box6::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4CB71A;
+    border-radius: 5px;
+}
+.dataname{
+    position: absolute;
+    top: 120%;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    left: -70px;
+    color: #555555;
+}
+.box1{
+    animation: box1 1s ease 1s forwards;
+}
+.box1 > p{
+    animation: box1p 1s ease 1s forwards;
+}
+.box1 > .icofont-verification-check{
+    animation: box1i 1s ease 1s forwards;
+}
+.box2::before{
+    animation: box2 2s linear 2s forwards;
+}
+.box3{
+    animation: box1 1s ease 4s forwards;
+}
+.box3 > p{
+    animation: box1p 1s ease 4s forwards;
+}
+.box3 > .icofont-verification-check{
+    animation: box1i 1s ease 4s forwards;
+}
+.box4::before{
+    animation: box2 2s linear 5s forwards;
+}
+.box5{
+    animation: box1 1s ease 7s forwards;
+}
+.box5 > p{
+    animation: box1p 1s ease 7s forwards;
+}
+.box5 > .icofont-verification-check{
+    animation: box1i 1s ease 7s forwards;
+}
+.box6::before{
+    animation: box2 2s linear 8s forwards;
+}
+.box7{
+    animation: box1 1s ease 10s forwards;
+}
+.box7 > p{
+    animation: box1p 1s ease 10s forwards;
+}
+.box7 > .icofont-verification-check{
+    animation: box1i 1s ease 10s forwards;
+}
+@keyframes box1{
+    0%{
+        border: 5px solid #DFDFDF;
+    }
+    100%{
+        border: 5px solid #4CB71A;
+        background-color: #4CB71A;
+    }
+}
+@keyframes box1p{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes box1i{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        color: white;
+    }
+}
+@keyframes box2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.order-done{
+    font-size: 24px;
+    color: #4CB71A;
+    font-weight: 700;
+    margin-top: 100px;
+    opacity: 0;
+    animation: order 1s ease 11s forwards;
+}
+@keyframes order{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
